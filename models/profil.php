@@ -1,7 +1,6 @@
 <?php
 
 class profil {
-
     public $id = 0;
     public $name = '';
     public $firstname = '';
@@ -17,7 +16,7 @@ class profil {
         try {
             $this->database = new PDO('mysql:host=localhost;dbname=Yume;charset=utf8', 'stituor', 'guillaume60');
         } catch (Exception $exc) {
-            die('la base de donnée n\'est pas connectée' . $exc->getTraceAsString());
+            die('la base de donnée n\'est pas connectée' . $exc->getMessage());
         }
     }
 
@@ -47,7 +46,7 @@ class profil {
     }
 
     public function getUserElementForLogin() {
-        $query = 'SELECT `id`, `mail`, `lastname`, `firstname`, `password` '
+        $query = 'SELECT `id`, `mail`, `firstname`, `password` '
                 . ' FROM `gdfgger_usersInscription` '
                 . ' WHERE `mail` = :mail ';
 

@@ -1,3 +1,6 @@
+<?php
+include_once 'controllers/membreCtrl.php';
+    ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
     <head>
@@ -9,20 +12,29 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
     </head>
+    <title Espace Membre></title>
     <body>
-        <img src="../assets/img/logo.png" id="logo"/>
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Connexion</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="ajout-profil.php">Inscription</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="deconnexion.php">Deconnexion<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Matcher !</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Modifiez votre profil</a>
+      </li>
+ <li class="nav-item active">
+        <a class="nav-link" href="#">Passez au premium<span class="sr-only"></span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+          Bienvenue <?php echo htmlentities($_SESSION['user']['firstname']); ?> !<br />
+    </body>
+    </html>

@@ -28,7 +28,7 @@ include_once 'include/header.php';
             </div>
             <div id="Mail" class="form-group">
                 <label for="mail">Email : </label>
-                <input class="form-control" id="mail" type="text" aria-describedby="mail" name="mail" placeholder="adresse@gmail.com" value="<?= isset($_POST['mail']) ? $_POST['mail'] : '' ?>" />       
+                <input class="form-control" id="mail" type="email" aria-describedby="mail" name="mail" placeholder="adresse@gmail.com" value="<?= isset($_POST['mail']) ? $_POST['mail'] : '' ?>" />       
                 <p><?php echo isset($formError['mail']) ? $formError['mail'] : '' ?></p>
             </div>
             <div id="phone" class="form-group">

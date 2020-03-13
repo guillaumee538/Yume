@@ -1,7 +1,8 @@
 <?php
-include_once 'include/header.php';
+session_start();
 include_once 'models/profil.php';
 include_once 'controllers/indexCtrl.php';
+include_once 'include/header.php';
 ?>
         <h1>Connexion</h1>
         <form action="#" method="POST">
